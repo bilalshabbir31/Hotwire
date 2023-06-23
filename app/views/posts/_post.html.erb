@@ -11,5 +11,8 @@
   <p>
     <%= link_to "Show this post", post, class: "inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800" %>
     <%= link_to "Delete", post_path(post), data: { turbo_method: :delete }, class: "inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800" %>
+    <%= turbo_frame_tag post do %>
+      <%= link_to "Edit", edit_post_path(post), class: "inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800" %>
+    <% end %>
   </p>
 </div>
